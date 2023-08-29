@@ -96,6 +96,7 @@ function resetGame() {
   $(".reset").css({
     zIndex: 10,
   });
+  $(".clicked").removeClass("clicked");
   $(".points").html("00");
   $(".box").remove();
   $(".result").hide();
