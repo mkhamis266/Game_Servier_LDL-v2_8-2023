@@ -43,7 +43,6 @@ body {
   }
 }
 .box-content .left-logo {
-  background-color: var(--main-color);
   max-width: 160px;
 }
 
