@@ -1,0 +1,175 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  -webkit-user-select: none;
+}
+body {
+  font-family: "Trebuchet MS", sans-serif;
+}
+
+.box-content {
+  background-color: #fff;
+  box-shadow: 0 10px 20px rgb(0 0 0 / 19%), 0 6px 6px rgb(0 0 0 / 23%);
+  box-sizing: border-box;
+  border-bottom: 1px solid #dfdfdf;
+  border-left: 1px solid #ececec;
+  border-radius: 8px;
+  border-right: 1px solid #ececec;
+  /* box-shadow: 0 2px 4px 0 rgb(0 0 0 / 5%); */
+  margin-bottom: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20px;
+  min-height: 100px;
+  position: relative;
+  /* text-align: center; */
+  z-index: 1;
+  padding: 20px 30px;
+}
+
+.box-content .left-logo {
+  max-width: 60px;
+}
+
+.home,
+.game,
+.result {
+  width: 100%;
+  height: 100vh;
+  background-position: center;
+  background-size: 100% 100%;
+  position: relative;
+  overflow: hidden;
+  display: none;
+}
+
+/* home view */
+.home {
+  background-image: url(../imgs/bg.jpg);
+  display: block;
+  background-position: center;
+  background-size: 100% 100%;
+}
+
+.start {
+  position: absolute;
+  top: 73%;
+  left: 18%;
+  width: 31%;
+  height: 18%;
+  cursor: pointer;
+}
+
+/* game view */
+.game {
+  background-image: url("../imgs/bg.jpg");
+}
+
+.score {
+  position: absolute;
+  font-size: 2.5rem;
+  z-index: 200;
+  font-family: arial;
+  color: #213e82;
+  user-select: none;
+  margin: 1rem;
+  margin-right: 1rem;
+  padding: 1rem;
+  /* width: 100%; */
+  top: 0;
+  right: 1rem;
+  text-align: right;
+  font-weight: bold;
+  background-color: #fff;
+  border: 1px solid #213e82;
+  box-shadow: 1px 1px 5px #213e82 inset;
+  border-radius: 15px;
+}
+
+.box {
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  top: -150px;
+  transition: transform 1.5s linear;
+  cursor: pointer;
+  z-index: 100;
+}
+
+.move {
+  transform: translateY(120vh);
+}
+
+.counter {
+  /* width: 100%; */
+  margin: 0 auto;
+  text-align: left;
+  font-family: arial;
+  color: #27c44c;
+  font-weight: bold;
+  margin-top: 1rem;
+  margin-left: 2rem;
+  padding: 1rem;
+  font-size: 2.5rem;
+  position: absolute;
+  z-index: 9999;
+  background-color: #fff;
+  border: 2px solid #27c44c;
+  border-radius: 15px;
+  box-shadow: 1px 1px 5px inset;
+}
+
+.gloves {
+  z-index: 101;
+  position: absolute;
+  width: 10%;
+  left: 45%;
+  top: 80%;
+  transition: left 0.2s cubic-bezier(0.42, -0.3, 0.78, 1.25), top 0.2s cubic-bezier(0.42, -0.3, 0.78, 1.25);
+}
+.gloves img {
+  width: 100%;
+}
+
+/* result view */
+.result {
+  background-image: url(../imgs/result.jpg);
+}
+
+.final-score {
+  position: absolute;
+  width: 15%;
+  left: 38%;
+  top: 49%;
+  color: #213e82;
+  font-size: 8.5rem;
+  text-align: right;
+}
+
+.reset {
+  position: absolute;
+  left: 90%;
+  top: 72%;
+  width: 8%;
+  height: 14%;
+  cursor: pointer;
+  z-index: -1;
+}
+
+.glove {
+  width: 100px;
+  position: absolute;
+  transition: all 0.4s ease-in-out;
+  top: calc(50% - 50px);
+  z-index: 1000;
+}
+#rightGlove {
+  left: calc(100% - 100px);
+}
+#leftGlove {
+  right: calc(100% - 100px);
+}
+.clicked {
+  transform: scale(1.2)!important;
+}

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="imgs/fav.png" type="image/x-icon" />
+    <title>Servier - LDL Game V2</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/11.7.18/sweetalert2.css" integrity="sha512-K0TEY7Pji02TnO4NY04f+IU66vsp8z3ecHoID7y0FSVRJHdlaLp/TkhS5WDL3OygMkVns4bz0/ah4j8M3GgguA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <!-- partial:index.partial.html -->
+    <div class="home">
+      <div class="row h-100 align-items-center">
+        <div class="col-md-8 mx-auto">
+          <div class="box-content">
+            <div class="top-logos my-3 py-3 d-flex justify-content-between">
+              <img src="imgs/fav.png" class="left-logo" alt="" />
+              <img src="imgs/Lipocomb-Logo-FINAL.png" height="70" alt="" />
+            </div>
+            <h3 class="text-center my-5">Welcome to LDL Game</h3>
+            <form id="registerForm" class="row g-3">
+              <div class="row mb-3">
+                <label for="inputFullName" class="col-sm-2 col-form-label">Full Name</label>
+                <div class="col-sm-10">
+                  <input type="text" class="form-control" id="inputFullName" placeholder="Enter Your Full Name" required="" />
+                </div>
+              </div>
+              <div class="row mb-3">
+                <label for="inputEmail" class="col-sm-2 col-form-label">Email</label>
+                <div class="col-sm-10">
+                  <input type="email" class="form-control" id="inputEmail" placeholder="Enter Your Email" required="" />
+                </div>
+              </div>
+
+              <div class="col-12 text-center">
+                <button id="playButton" type="submit" class="btn btn-primary">Play</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="game">
+      <div class="counter">Time: <span id="counter">00</span></div>
+      <div class="score">Score: <span class="points">00</span></div>
+      <img id="rightGlove" class="glove" src="imgs/right-glove.png" alt="" />
+      <img id="leftGlove" class="glove" src="imgs/left-glove.png" alt="" />
+    </div>
+    <div class="result">
+      <h6 class="final-score">00</h6>
+      <div class="reset"></div>
+    </div>
+    <!-- partial -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/11.7.18/sweetalert2.min.js" integrity="sha512-w7iWPJKtRcGuYa3Q52yOCaCgu1VC0Xuza34spZheOpS94AbzOIr5RLCojyX/UlnG7aJuGhWnPBQUla9ikd1UoQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.blockUI/2.70/jquery.blockUI.min.js" integrity="sha512-eYSzo+20ajZMRsjxB6L7eyqo5kuXuS2+wEbbOkpaur+sA2shQameiJiWEzCIDwJqaB0a4a6tCuEvCOBHUg3Skg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="js/api.js"></script>
+    <script src="js/api.js"></script>
+    <script src="js/script.js"></script>
+  </body>
+</html>
