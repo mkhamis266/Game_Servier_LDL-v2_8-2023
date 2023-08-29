@@ -2,14 +2,15 @@ let apiUrl = "https://gameservierldl8-2023-default-rtdb.europe-west1.firebasedat
 
 $(document).ajaxStart($.blockUI).ajaxStop($.unblockUI);
 
-const fullNameRegex = /(^\w{2,16})([ ])(\w{2,16})?([ ]{0,1})?([A-Za-z]{2,16})?([ ]{0,1})?([A-Za-z]{2,16})/;
+// const fullNameRegex = /(^\w{2,16})([ ])(\w{2,16})?([ ]{0,1})?([A-Za-z]{2,16})?([ ]{0,1})?([A-Za-z]{2,16})/;
 const emailRegex = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/;
 
 function registerPlayer() {
-  if (!fullNameRegex.test($("#inputFullName").val().trimStart())) {
-    swal.fire("Full Name Error!", "Full name should be 2 name at least and separated by space", "error");
-    return;
-  } else if (!emailRegex.test($("#inputEmail").val().trimStart())) {
+  // if (!fullNameRegex.test($("#inputFullName").val().trimStart())) {
+  //   swal.fire("Full Name Error!", "Full name should be 2 name at least and separated by space", "error");
+  //   return;
+  // } else 
+  if (!emailRegex.test($("#inputEmail").val().trimStart())) {
     swal.fire("Email Error!", "email should be xxx@xxx.xxx", "error");
     return;
   } else {

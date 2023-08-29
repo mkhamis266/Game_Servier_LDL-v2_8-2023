@@ -1,5 +1,6 @@
-let playersArr =[];
+let playersArr = [];
 $(async function () {
+  $(".results-container").empty();
   const playersData = await loadFromFirebase();
   for (const playerId in playersData) {
     playersArr.push(playersData[playerId]);
@@ -13,7 +14,6 @@ $(async function () {
       <button class="btn btn-danger" onclick="deletePlayer('${playerId}')">delete</button>
     </td>
     `);
-    $(".results-container").empty();
     $(".results-container").append(tr);
   }
 });
